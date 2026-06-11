@@ -6,6 +6,7 @@
     <title>性別、健康與多元文化 終極衝刺</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,8 +16,10 @@
         <h1><i class="fas fa-book-open"></i> 性別、健康與多元文化 期末考終極衝刺</h1>
         <div class="mode-selector">
             <button class="btn active" data-mode="readaloud"><i class="fas fa-headphones"></i> 語音伴讀</button>
+            <button class="btn" data-mode="quiz"><i class="fas fa-tasks"></i> 選擇題特訓</button>
             <button class="btn" data-mode="flashcards"><i class="fas fa-layer-group"></i> 問答閃卡</button>
             <button class="btn" data-mode="cloze"><i class="fas fa-edit"></i> 選擇克漏字</button>
+            <button class="btn" data-mode="sprint"><i class="fas fa-rocket"></i> 期末考衝刺</button>
         </div>
     </header>
 
@@ -61,6 +64,28 @@
             </div>
         </section>
 
+        <!-- 選擇題特訓區塊 -->
+        <section id="quiz" class="content-section">
+            <div class="quiz-controls glass">
+                <p><i class="fas fa-bullseye"></i> 點擊選項進行作答，系統會立即回饋對錯與名師解析！</p>
+                <div class="flashcard-nav" style="margin-top: 10px;">
+                    <button id="prev-quiz" class="control-btn"><i class="fas fa-chevron-left"></i> 上一題</button>
+                    <span id="quiz-counter">1 / 1</span>
+                    <button id="next-quiz" class="control-btn">下一題 <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div id="quiz-container" class="quiz-box glass">
+                <h3 id="quiz-q-title" class="quiz-title">載入中...</h3>
+                <div id="quiz-options" class="quiz-options">
+                    <!-- 動態載入選項 -->
+                </div>
+                <div id="quiz-explanation" class="quiz-explanation glass" style="display: none;">
+                    <h4>👨‍🏫 老師解析</h4>
+                    <p id="quiz-explanation-text"></p>
+                </div>
+            </div>
+        </section>
+
         <!-- 克漏字區塊 -->
         <section id="cloze" class="content-section">
             <div class="cloze-controls glass">
@@ -69,6 +94,13 @@
             </div>
             <div id="cloze-content" class="cloze-box">
                 <!-- 克漏字內容將由 JS 動態生成 -->
+            </div>
+        </section>
+
+        <!-- 期末考衝刺區塊 -->
+        <section id="sprint" class="content-section">
+            <div id="sprint-content" class="markdown-body glass">
+                <!-- Markdown 內容將由 JS 動態生成 -->
             </div>
         </section>
     </main>
