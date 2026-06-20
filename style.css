@@ -5,9 +5,9 @@
     --accent: #10b981;
     --cyan: #06b6d4;
     --bg-dark: #020617;
-    --text-main: #ffffff;
+    --text-main: #f1f5f9; /* Softer white to prevent eye strain / glare */
     --text-muted: #94a3b8;
-    --glass-bg: rgba(15, 23, 42, 0.6);
+    --glass-bg: rgba(15, 23, 42, 0.85); /* More opaque so background animations don't distract reading */
     --glass-border: rgba(255, 255, 255, 0.1);
     --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
