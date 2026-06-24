@@ -491,8 +491,8 @@ const quizData = [
             "(C) 初婚與再婚者各半",
             "(D) 多為未婚同居"
         ],
-        "answer": "C",
-        "explanation": "臺灣新住民的婚姻狀態多屬「初婚與再婚者各半」。"
+        "answer": "A",
+        "explanation": "根據內政部統計，臺灣新住民的婚姻狀態絕大部分屬「初婚」。\n⚠️【防坑陷阱】：若題目問的是「娶外籍配偶的『本國籍丈夫』」，答案才是「初婚與再婚者各半」，考試時務必看清楚主詞喔！"
     },
     {
         "q": "【第10章】在臺灣的新住民家庭中，丈夫多數扮演何種角色？",
@@ -771,7 +771,7 @@ const clozeData = [
 
     ,{
         title: "平時測驗與期末核心精華綜合演練",
-        content: `憂鬱症的患者常因害怕被貼上標籤，而採取<span class="cloze-word" data-word="不求助、不求診、不傾訴"></span>的三不態度。女性感染性病因為性器官內隱，常少有症狀而導致<span class="cloze-word" data-word="併發症"></span>才就醫。更年期長期使用合併型荷爾蒙療法，會增加<span class="cloze-word" data-word="心血管疾病與乳癌"></span>的風險。<br><br>外籍勞工在台灣常見的不良勞動處境包含被<span class="cloze-word" data-word="超時與非法使用"></span>。社會若肯定歧視，就等於承認了<span class="cloze-word" data-word="強可凌弱"></span>的霸凌邏輯。心理衛生組織對於同性戀的共識是<span class="cloze-word" data-word="去病理化"></span>，認為其並非病態。<br><br>校園中最不容易被舉發的霸凌類型是<span class="cloze-word" data-word="性別霸凌"></span>。美國的<span class="cloze-word" data-word="石牆事件"></span>啟發了全球的同志公民運動。台灣新住民的婚姻狀態多屬<span class="cloze-word" data-word="初婚與再婚各半"></span>，且新住民妻子通常非常看重子女的<span class="cloze-word" data-word="教育"></span>。非政府組織（NGO）是一種由公民<span class="cloze-word" data-word="自願結社"></span>而來的團體，媒體接近使用權的出發點是讓多元聲音被聽見，絕非為了建構特定的<span class="cloze-word" data-word="意識型態"></span>。`
+        content: `憂鬱症的患者常因害怕被貼上標籤，而採取<span class="cloze-word" data-word="不求助、不求診、不傾訴"></span>的三不態度。女性感染性病因為性器官內隱，常少有症狀而導致<span class="cloze-word" data-word="併發症"></span>才就醫。更年期長期使用合併型荷爾蒙療法，會增加<span class="cloze-word" data-word="心血管疾病與乳癌"></span>的風險。<br><br>外籍勞工在台灣常見的不良勞動處境包含被<span class="cloze-word" data-word="超時與非法使用"></span>。社會若肯定歧視，就等於承認了<span class="cloze-word" data-word="強可凌弱"></span>的霸凌邏輯。心理衛生組織對於同性戀的共識是<span class="cloze-word" data-word="去病理化"></span>，認為其並非病態。<br><br>校園中最不容易被舉發的霸凌類型是<span class="cloze-word" data-word="性別霸凌"></span>。美國的<span class="cloze-word" data-word="石牆事件"></span>啟發了全球的同志公民運動。台灣新住民的婚姻狀態多屬<span class="cloze-word" data-word="初婚"></span>，且新住民妻子通常非常看重子女的<span class="cloze-word" data-word="教育"></span>。非政府組織（NGO）是一種由公民<span class="cloze-word" data-word="自願結社"></span>而來的團體，媒體接近使用權的出發點是讓多元聲音被聽見，絕非為了建構特定的<span class="cloze-word" data-word="意識型態"></span>。`
     }
 ];
 
