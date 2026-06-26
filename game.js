@@ -115,7 +115,69 @@ function startTopic(topic) {
     switchScreen('play');
 }
 
+
+// --- Web Audio API Sound Effects ---
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+function playSuccessSound() {
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+    
+    // Pleasant chime (C5, E5, G5, C6)
+    const notes = [523.25, 659.25, 783.99, 1046.50]; 
+    const now = audioCtx.currentTime;
+    
+    notes.forEach((freq, i) => {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, now + i * 0.1);
+        
+        gain.gain.setValueAtTime(0, now + i * 0.1);
+        gain.gain.linearRampToValueAtTime(0.3, now + i * 0.1 + 0.05);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + i * 0.1 + 0.5);
+        
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        
+        osc.start(now + i * 0.1);
+        osc.stop(now + i * 0.1 + 0.5);
+    });
+}
+
+function playErrorSound() {
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+    
+    // Discordant low buzzer
+    const osc1 = audioCtx.createOscillator();
+    const osc2 = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+    
+    const now = audioCtx.currentTime;
+    
+    osc1.type = 'sawtooth';
+    osc1.frequency.setValueAtTime(150, now);
+    
+    osc2.type = 'square';
+    osc2.frequency.setValueAtTime(155, now);
+    
+    gain.gain.setValueAtTime(0, now);
+    gain.gain.linearRampToValueAtTime(0.2, now + 0.05);
+    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.4);
+    
+    osc1.connect(gain);
+    osc2.connect(gain);
+    gain.connect(audioCtx.destination);
+    
+    osc1.start(now);
+    osc2.start(now);
+    osc1.stop(now + 0.4);
+    osc2.stop(now + 0.4);
+}
+// ------------------------------------
+
 document.getElementById('check-btn').addEventListener('click', () => {
+
     const blocks = document.querySelectorAll('.sortable-block');
     let isCorrect = true;
     
@@ -125,6 +187,7 @@ document.getElementById('check-btn').addEventListener('click', () => {
         
         if (actualOrder !== correctOrder) {
             isCorrect = false;
+            if(index === 0) playErrorSound(); // only play once per check
             // Shake effect for wrong blocks
             block.classList.add('shake');
             setTimeout(() => block.classList.remove('shake'), 500);
@@ -140,6 +203,7 @@ document.getElementById('check-btn').addEventListener('click', () => {
 });
 
 function triggerSuccess() {
+    playSuccessSound();
     completedTopics.add(currentTopic.id);
     
     // Confetti!
