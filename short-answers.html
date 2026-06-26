@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>必考簡答題 終極大補帖 | 114下 期末考</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(255,71,87,0.2) 0%, rgba(255,107,129,0.05) 100%);
+            border: 1px solid rgba(255, 71, 87, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .header h1 {
+            color: #ff4757;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+        .header p {
+            color: #ddd;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .nav-back {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #a4b0be;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .nav-back:hover {
+            color: #fff;
+        }
+        .qa-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .qa-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        .qa-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #1e90ff, #70a1ff);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        .qa-title {
+            font-size: 1.4rem;
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .qa-mnemonic {
+            background: rgba(255, 165, 2, 0.15);
+            border-left: 4px solid #ffa502;
+            padding: 15px 20px;
+            border-radius: 0 10px 10px 0;
+            margin-bottom: 20px;
+        }
+        .qa-mnemonic-title {
+            color: #ffa502;
+            font-weight: 800;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        .qa-mnemonic-content {
+            color: #fff;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .qa-answer {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            position: relative;
+        }
+        .qa-answer::before {
+            content: "標準擬答";
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: #2ed573;
+            color: #000;
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            font-weight: 800;
+        }
+        .qa-answer p {
+            color: #dfe4ea;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .qa-answer p:last-child {
+            margin-bottom: 0;
+        }
+        .keyword {
+            color: #2ed573;
+            font-weight: bold;
+        }
+        .highlight {
+            color: #ff4757;
+            font-weight: bold;
+        }
+        
+        /* 動態背景與首頁一致 */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            z-index: -1;
+        }
+        .bg-gradient::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(79, 70, 229, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 30%, rgba(236, 72, 153, 0.15) 0%, transparent 50%);
+            filter: blur(60px);
+            animation: pulse 15s ease-in-out infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+
+    <div class="container">
+        <a href="index.html" class="nav-back"><i class="fas fa-arrow-left"></i> 回到特訓大廳</a>
+        
+        <div class="header glass">
+            <h1><i class="fas fa-fire"></i> 期末考必考簡答題 終極大補帖</h1>
+            <p>老師面授直接洩題與強烈暗示的 4 大核心考點！<br>
+            <span style="color:#ff6b81; font-weight:bold;">字數需達 200~400 字</span>，請熟記「記憶口訣」與「綠色關鍵字」，考場上直接擴寫必拿高分！</p>
+        </div>
+
+        <!-- 題目一 -->
+        <div class="qa-card">
+            <div class="qa-number">必考預測 1 | 第 11 章</div>
+            <div class="qa-title">何謂全球化與在地化？請說明兩者差異，並舉例何謂「全球在地化」？</div>
+            
+            <div class="qa-mnemonic">
+                <div class="qa-mnemonic-title"><i class="fas fa-brain"></i> 記憶口訣：【三步關鍵字展開法】</div>
+                <div class="qa-mnemonic-content">
+                    1. <b>[起] 外來衝擊</b> (全球一體化、同質性)<br>
+                    2. <b>[承] 保有本土</b> (在地差異性、文化自信)<br>
+                    3. <b>[合] 麥當勞薯來堡</b> (全球在地化 Glocalization)
+                </div>
+            </div>
+
+            <div class="qa-answer">
+                <p>「全球化」是指在跨國資本主義、科技與通訊的發展下，商品、資金、資訊與人員在世界各地快速流動，形成全球一體化的過程。這往往伴隨著強勢國家文化向全球輸出。相對地，「在地化」則是指各個地方社會，為了因應全球化的衝擊，重新尋找、確認並強化自身本土的傳統文化、歷史記憶與生活方式的過程。兩者的差異在於：全球化帶來了<span class="highlight">同質性與標準化</span>；而在地化則強調<span class="highlight">差異性與本土特色</span>。</p>
+                <p>然而，兩者並非絕對對立，而是可以融合為「<span class="keyword">全球在地化 (Glocalization)</span>」。全球在地化是指跨國企業或全球性文化在進入地方社會時，為了避免水土不服，必須將其核心產品與當地的風俗民情、飲食習慣結合，長出新的樣貌。</p>
+                <p>以<span class="keyword">台灣麥當勞</span>為例，雖然其擁有全球標準化的 SOP，但為了迎合台灣人的飲食習慣與文化，推出了結合在地年節氣氛的「金迎招財薯來堡」，甚至曾販售過米漢堡。這顯示了我們在面對外來文化時，不需刻意排斥，而是能以「<span class="keyword">文化自信</span>」主動選擇並轉換為獨特的本土風格。</p>
+            </div>
+        </div>
+
+        <!-- 題目二 -->
+        <div class="qa-card">
+            <div class="qa-number" style="background: linear-gradient(135deg, #e056fd, #be2edd);">必考預測 2 | 第 6 章</div>
+            <div class="qa-title">請說明醫學與疾病上的「性別差異」，並以女性糖尿病為例說明。</div>
+            
+            <div class="qa-mnemonic">
+                <div class="qa-mnemonic-title"><i class="fas fa-brain"></i> 記憶口訣：【三步關鍵字展開法】</div>
+                <div class="qa-mnemonic-content">
+                    1. <b>[起] 不是老胖專利</b> (疾病非純生理，有社會性別差異)<br>
+                    2. <b>[承] 少女內分泌失調</b> (第一型糖尿病 ➡️ PCOS)<br>
+                    3. <b>[合] 卵巢長水泡</b> (IDF 提倡性別敏感度)
+                </div>
+            </div>
+
+            <div class="qa-answer">
+                <p>在傳統醫學觀念中，疾病往往被視為純粹的生理現象，然而許多疾病的發生與照護，背後隱藏了巨大的「<span class="highlight">社會性別差異</span>」。性別差異不僅影響疾病的盛行率，也影響了病患在醫療體系中所受到的診斷與照護方式。</p>
+                <p>以女性糖尿病為例，過去糖尿病常被刻板地認為是「中老年肥胖者」的疾病。但根據2012年的研究指出，<span class="keyword">第一型糖尿病</span>的年輕女性，經常面臨因胰島素缺乏而導致的內分泌失調。這種內分泌問題會進一步引發月經不規律、延遲，甚至提早停經，並大幅增加罹患「<span class="keyword">多囊性卵巢囊腫 (PCOS)</span>」的風險。這顯示了女性在糖尿病的病程發展與併發症上，有著與男性截然不同的生理與心理負擔。</p>
+                <p>因此，<span class="keyword">國際糖尿病聯盟 (IDF)</span> 特別提倡，在現代醫療與糖尿病照護中，必須融入「<span class="highlight">性別敏感度</span>」。醫療政策應建立完善的性別統計資料，針對不同性別的生理特質提供差異化的照護與衛教資源，打破單一的醫療觀點，才能真正落實醫療上的實質平等。</p>
+            </div>
+        </div>
+
+        <!-- 題目三 -->
+        <div class="qa-card">
+            <div class="qa-number" style="background: linear-gradient(135deg, #f0932b, #e15f41);">必考預測 3 | 第 8、11 章</div>
+            <div class="qa-title">非政府組織 (NGO) 對於多元性別族群有何重要性？請以「同志諮詢熱線」為例說明。</div>
+            
+            <div class="qa-mnemonic">
+                <div class="qa-mnemonic-title"><i class="fas fa-brain"></i> 記憶口訣：【三步關鍵字展開法】</div>
+                <div class="qa-mnemonic-content">
+                    1. <b>[起] 弱勢污名化</b> (政府僵化，NGO 是社會安全網)<br>
+                    2. <b>[承] 諮詢熱線</b> (接住這些非主流族群)<br>
+                    3. <b>[合] 出櫃/父母喝茶</b> (提供醫療法令實質協助)
+                </div>
+            </div>
+
+            <div class="qa-answer">
+                <p>在社會結構中，非主流或弱勢族群（如 LGBTQ+ 多元性別者）往往面臨來自家庭、職場及醫療體系的「<span class="highlight">污名化</span>」與資源匱乏。在此困境下，「<span class="keyword">非政府組織 (NGO)</span>」扮演了接住這些弱勢族群的關鍵<span class="highlight">社會安全網</span>。NGO 補足了政府體制的僵化與不足，透過草根力量提供情感支持、實質協助與倡議平權。</p>
+                <p>以台灣最具代表性的「<span class="keyword">同志諮詢熱線</span>」為例，該組織針對多元性別族群的不同需求，提供了非常具體的協助。首先，他們為面臨自我認同掙扎的同志提供「<span class="keyword">出櫃前的一對一諮詢</span>」，減輕其心理壓力；其次，他們也開設了「<span class="keyword">同志父母親的下午茶聚會與諮詢專線</span>」，協助家長跨越代溝與偏見，修復家庭關係。</p>
+                <p>此外，針對處境更為艱難的跨性別者，熱線亦提供醫療資訊轉介與法令資源協助。透過這些具體行動，同志諮詢熱線不僅為多元性別者提供了避風港，更積極推動社會對話與法規改革，是促成台灣社會邁向多元包容不可或缺的推手。</p>
+            </div>
+        </div>
+
+        <!-- 題目四 -->
+        <div class="qa-card">
+            <div class="qa-number" style="background: linear-gradient(135deg, #20bf6b, #0fb9b1);">必考預測 4 | 第 9 章</div>
+            <div class="qa-title">何謂「性別主流化」？試說明 CEDAW 公約的核心概念與國內實施現況。</div>
+            
+            <div class="qa-mnemonic">
+                <div class="qa-mnemonic-title"><i class="fas fa-brain"></i> 記憶口訣：【三步關鍵字展開法】</div>
+                <div class="qa-mnemonic-content">
+                    1. <b>[起] 政策看見差異</b> (性別統計、性別影響評估)<br>
+                    2. <b>[承] 婦女法典 CEDAW</b> (國內法化、國家報告)<br>
+                    3. <b>[合] 三大核心不可退讓</b> (不歧視、實質平等、國家義務)
+                </div>
+            </div>
+
+            <div class="qa-answer">
+                <p>「<span class="keyword">性別主流化</span>」是指政府在制定所有法規、政策與編列預算時，都必須將「性別觀點」納入考量。其目的是透過「性別統計」與「性別影響評估」等客觀工具，看見不同性別在社會中的處境差異，進而避免政策在無意間造成性別歧視，最終達成性別平等。</p>
+                <p>而推動性別主流化最重要的國際依據，便是被譽為婦女權益法典的《<span class="keyword">CEDAW (消除對婦女一切形式歧視公約)</span>》。其三大核心概念為：一、「<span class="highlight">不歧視</span>」，保障婦女在政治、經濟與社會各領域的權利；二、「<span class="highlight">實質平等</span>」，強調不僅是法律條文上的形式平等，更要積極提供資源以彌補歷史上的弱勢；三、「<span class="highlight">國家義務</span>」，國家必須承擔消除歧視的責任，不能以個人選擇或傳統習俗作為推託之詞。</p>
+                <p>在國內實施現況方面，台灣於 2012 年將 CEDAW 「<span class="keyword">國內法化</span>」。透過嚴格的「國家報告制度」，政府機關必須每四年提出性平推動報告，並接受國際與外部專家的審查。這項機制有效推動了國內職場法規的修正（如放寬育嬰假限制、強化性騷擾防治），讓性別平權從口號落實為具體的國家政策。</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
