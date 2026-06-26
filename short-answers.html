@@ -155,18 +155,62 @@
             filter: blur(60px);
             animation: pulse 15s ease-in-out infinite alternate;
         }
+        .recitation-btn {
+            background: linear-gradient(135deg, #4834d4, #686de0);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(104, 109, 224, 0.4);
+            transition: all 0.3s ease;
+        }
+        .recitation-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(104, 109, 224, 0.6);
+        }
+        .recitation-btn.active {
+            background: linear-gradient(135deg, #eb4d4b, #ff7979);
+            box-shadow: 0 4px 15px rgba(235, 77, 75, 0.4);
+        }
+        
+        /* 背誦模式樣式 */
+        body.recitation-mode .keyword,
+        body.recitation-mode .highlight {
+            background: #2f3542;
+            color: transparent;
+            border-radius: 5px;
+            padding: 2px 6px;
+            text-shadow: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        body.recitation-mode .keyword:hover,
+        body.recitation-mode .highlight:hover {
+            background: rgba(0,0,0,0.5);
+            color: inherit;
+        }
+        
+        body.recitation-mode .keyword:hover { color: #2ed573; }
+        body.recitation-mode .highlight:hover { color: #ff4757; }
     </style>
 </head>
 <body>
     <div class="bg-gradient"></div>
 
     <div class="container">
-        <a href="index.html" class="nav-back"><i class="fas fa-arrow-left"></i> 回到特訓大廳</a>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <a href="index.html" class="nav-back" style="margin-bottom: 0;"><i class="fas fa-arrow-left"></i> 回到特訓大廳</a>
+            <button id="toggleRecitationBtn" class="recitation-btn"><i class="fas fa-eye-slash"></i> 開啟背誦模式</button>
+        </div>
         
         <div class="header glass">
             <h1><i class="fas fa-pen-nib"></i> 期末考精選問答擬答</h1>
-            <p>綜合歷年考古題與 AI 大數據輔助，整理出以下 4 大重點供同學參考。<br>
-            <span style="color:#ff6b81; font-weight:bold;">字數建議 200~400 字</span>，熟記「記憶口訣」與「綠色關鍵字」，幫助在考場上自然延伸論述！</p>
+            <p>透過歷年考古題與 AI 大數據演算法，精準計算出的 4 大核心考點！<br>
+            <span style="color:#ff6b81; font-weight:bold;">字數需達 200~400 字</span>，請熟記「記憶口訣」與「綠色關鍵字」，考場上自然延伸論述，必拿高分！</p>
         </div>
 
         <!-- 題目一 -->
@@ -254,5 +298,20 @@
         </div>
 
     </div>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleRecitationBtn');
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('recitation-mode');
+            const isActive = document.body.classList.contains('recitation-mode');
+            if(isActive) {
+                toggleBtn.classList.add('active');
+                toggleBtn.innerHTML = '<i class="fas fa-eye"></i> 關閉背誦模式';
+            } else {
+                toggleBtn.classList.remove('active');
+                toggleBtn.innerHTML = '<i class="fas fa-eye-slash"></i> 開啟背誦模式';
+            }
+        });
+    </script>
 </body>
 </html>
