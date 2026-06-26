@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>口訣方塊挑戰</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="game.css">
+    <!-- SortableJS for smooth drag and drop -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+    <!-- Canvas Confetti for winning effect -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> 回大廳</a>
+            <h1><i class="fas fa-gamepad"></i> 記憶方塊排序</h1>
+            <div class="score-display">成功: <span id="success-count">0</span>/4</div>
+        </header>
+
+        <main id="game-main">
+            <!-- Stage 1: Select Topic -->
+            <div id="topic-selection" class="screen active">
+                <h2>請選擇要挑戰的考題</h2>
+                <div class="topic-grid" id="topic-grid">
+                    <!-- Topics injected by JS -->
+                </div>
+            </div>
+
+            <!-- Stage 2: Playing -->
+            <div id="play-screen" class="screen">
+                <h2 id="current-topic-title">載入中...</h2>
+                <p class="instruction">上下拖曳方塊，將它們按照「起 ➡️ 承 ➡️ 轉 ➡️ 合」的順序排列！</p>
+                
+                <div id="sortable-list" class="block-list">
+                    <!-- Blocks injected by JS -->
+                </div>
+
+                <button id="check-btn" class="action-btn">檢查順序 <i class="fas fa-check-circle"></i></button>
+            </div>
+
+            <!-- Stage 3: Success Overlay -->
+            <div id="success-overlay" class="overlay hidden">
+                <div class="overlay-content">
+                    <div class="icon-pulse"><i class="fas fa-check-circle"></i></div>
+                    <h2>完全正確！</h2>
+                    <p>你的大腦已經刻下這段邏輯了！</p>
+                    <button id="next-topic-btn" class="action-btn">繼續挑戰下一題</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
